@@ -8,6 +8,7 @@ import (
 	"github.com/ybkuroki/go-webapp-sample/service"
 )
 
+// new comment
 // CategoryController is a controller for managing category data.
 type CategoryController interface {
 	GetCategoryList(c echo.Context) error
