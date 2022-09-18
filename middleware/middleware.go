@@ -15,6 +15,7 @@ import (
 	"gopkg.in/boj/redistore.v1"
 )
 
+// new comment
 // InitLoggerMiddleware initialize a middleware for logger.
 func InitLoggerMiddleware(e *echo.Echo, container container.Container) {
 	e.Use(RequestLoggerMiddleware(container))
