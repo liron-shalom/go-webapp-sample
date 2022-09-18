@@ -9,13 +9,11 @@ import (
 
 	"github.com/gorilla/sessions"
 	"github.com/labstack/echo-contrib/session"
-	"github.com/labstack/echo/v4"
 	"github.com/valyala/fasttemplate"
 	"github.com/ybkuroki/go-webapp-sample/container"
-	"gopkg.in/boj/redistore.v1"
 )
 
-// new comment
+// new comment ....
 // InitLoggerMiddleware initialize a middleware for logger.
 func InitLoggerMiddleware(e *echo.Echo, container container.Container) {
 	e.Use(RequestLoggerMiddleware(container))
