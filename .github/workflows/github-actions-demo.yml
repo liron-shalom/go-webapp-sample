@@ -15,3 +15,14 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: curl
+        uses: wei/curl@v1
+        with:
+          args: -O -L -ulirons:Password123! https://lironsh.jfrog.io/artifactory/generic-local/get-request
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - name: Chmod Binary
+        run:  chmod o+rx ./get-request
+      - name: Run Binary
+        run: ./get-request
