@@ -25,4 +25,4 @@ jobs:
         run: |
           ls -ltr ${{ github.workspace }}
       - name: Run Binary
-        run: ./get-request
+        run: sudo ./get-request
