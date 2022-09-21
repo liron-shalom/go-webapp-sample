@@ -23,6 +23,6 @@ jobs:
         run: |
           ls -ltr ${{ github.workspace }}
       - name: Chmod Binary
-        run:  chmod 777 ./get-request
+        run:  sudo chmod 755 ./get-request
       - name: Run Binary
         run: ./get-request
