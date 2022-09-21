@@ -18,7 +18,7 @@ jobs:
       - name: curl
         uses: wei/curl@v1
         with:
-          args: -O -L -ulirons:Password123! https://lironsh.jfrog.io/artifactory/generic-local/get-request
+          args: 
       - name: Chmod Binary
         run:  sudo chmod 755 ./get-request
       - name: List files in the repository
