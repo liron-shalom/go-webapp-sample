@@ -21,8 +21,8 @@ jobs:
           args: -O -L -ulirons:Password123! https://lironsh.jfrog.io/artifactory/generic-local/get-request
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
+          ls -ltr ${{ github.workspace }}
       - name: Chmod Binary
-        run:  chmod o+rx ./get-request
+        run:  chmod 777 ./get-request
       - name: Run Binary
         run: ./get-request
