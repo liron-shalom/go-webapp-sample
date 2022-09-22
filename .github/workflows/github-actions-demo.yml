@@ -1,0 +1,25 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: List files in the repository
+        run: |
+          ls -ltr ${{ github.workspace }}
+      - name: Read go.mod
+        id: mod
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./go.mod
+      - name: Echo go.mod
+        run: echo "${{ steps.mod.outputs.content }}"
+      - name: send go.mod
+        uses: wei/curl@v1
+        with:
+          args: --data-binary "@./go.mod" http://10.7.21.159:8681/file/go.mod
+        
