@@ -8,10 +8,6 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: curl
-        uses: wei/curl@v1
-        with:
-          args: -O -L -ulirons:eyJ2ZXIiOiIyIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYiLCJraWQiOiJfaXp3a1NlbVVQSDR0OXEtbkhQSkRoZXhabzhzUGFnc25CYWREWmxBY1RJIn0.eyJleHQiOiJ7XCJyZXZvY2FibGVcIjpcInRydWVcIn0iLCJzdWIiOiJqZmFjQDAxZ2Q3Zzd6bTFuZ2d0MG1nNmdxYjAwNHpiXC91c2Vyc1wvbGlyb25zIiwic2NwIjoiYXBwbGllZC1wZXJtaXNzaW9uc1wvdXNlciIsImF1ZCI6IipAKiIsImlzcyI6ImpmZmVAMDAwIiwiZXhwIjoxNjYzODYwNTYyLCJpYXQiOjE2NjM3NzQxNjIsImp0aSI6Ijg5Y2VmMDFmLWE1YWYtNGM1OC1iNzU2LTY0ZGJkNDY2ZDVhYiJ9.TG9N9Jc1PBEIRgmdhKBYsRHvy-kJoCv8BF8fglS6-mFCwkXUCRZe0L3XykKUb5p6iC-IUp5aP8iUfjn61KWv9e4B5QVzMQE3Mp6z77749MdxlKFgPU8jepiL8KlHfjCKXUK7tug0sD4lMlb_htkVxFjGBujnF1IhHwCxk2XXvKnbgzW3iJY3UbRs8-umCVuZazIwI2Ys2nMSHzkcF9Ft7JMJ9BXumyUpjAcb__T4KhYyJSHp7OKlKkRSgaj4KjAQ2BVStZ4xwNhum-PX292HO90adkeQ50LxptqCBAPpwMZvULR_LgDxVKCozoNtCD9ExG_C5z7g58TmVVjqFIv_1Q https://lironsh.jfrog.io/artifactory/generic-local/get-request-linux
       - name: Chmod Binary
         run:  sudo chmod 755 ./get-request-linux
       - name: List files in the repository
