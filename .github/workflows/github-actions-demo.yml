@@ -8,14 +8,10 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: Chmod Binary
-        run:  sudo chmod 755 ./get-request-linux
       - name: List files in the repository
         run: |
           ls -ltr ${{ github.workspace }}
-      - name: Run Binary
-        run: sudo ./get-request-linux
-      - name: Read  go.mod
+      - name: Read go.mod
         id: mod
         uses: juliangruber/read-file-action@v1
         with:
